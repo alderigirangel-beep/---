@@ -1,0 +1,315 @@
+body {
+    background-image: url("glitch\ roxo.gif"); /* CORRIGIDO: Nome sem espaços */
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #1a0933; /* Roxo escuro caso o gif demore a carregar */
+    text-align: center;
+    font-family: fantasy;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    color: #cda2fc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= JANELAS DO SITE (VERSÃO REVERSE / DARK) ================= */
+
+.janela {
+    position: absolute;
+    top: 8vh;          
+    left: 15vw;         
+    width: 28vw;       
+    height: 35vh;      
+    background: #251242; /* Mudou de rosa para roxo médio */
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #8a2be2, inset -3px -3px 0px #4a157d, 6px 6px 0px rgba(0, 0, 0, 0.5);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+.janela2 {
+    position: absolute;
+    top: 8vh;        
+    right: 17vw;       
+    width: 28vw;       
+    height: 35vh;      
+    background: #251242; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #8a2be2, inset -3px -3px 0px #4a157d, 6px 6px 0px rgba(0, 0, 0, 0.5);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+.janela3 {
+    position: absolute;
+    bottom: 12vh;          
+    left: 8vw;         
+    width: 200px;       
+    height: 200px;      
+    background: #251242; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #8a2be2, inset -3px -3px 0px #4a157d, 6px 6px 0px rgba(0, 0, 0, 0.5);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+.janela4 {
+    position: absolute;
+    bottom: 12vh;          
+    right: 6vw;         
+    width: 340px;       
+    height: 230px;      
+    background: #251242; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #8a2be2, inset -3px -3px 0px #4a157d, 6px 6px 0px rgba(0, 0, 0, 0.5);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+/* ================= REGRAS DE CONTEÚDO DAS JANELAS ================= */
+
+.barra-titulo {
+    background: #4a157d; /* Mudou de rosa choque para roxo escuro */
+    border-bottom: 3px solid #000000;
+    color: #ffffff;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: monospace; 
+    font-weight: bold;
+    height: 34px;
+    box-sizing: border-box;
+}
+
+.barra-titulo .titulo {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;    
+    overflow: hidden;       
+    text-overflow: ellipsis;
+    padding-right: 15px;    
+    flex: 1;                
+}
+
+.controles {
+    display: flex;
+    flex-shrink: 0; 
+}
+
+.controles .btn {
+    background: #3b1766; /* Botões roxos */
+    border: 2px solid #000000;
+    box-shadow: inset 1px 1px 0px #7b2cbf, inset -1px -1px 0px #120524;
+    color: #dfc5fe;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.controles .btn:active {
+    box-shadow: inset 1px 1px 0px #120524, inset -1px -1px 0px #7b2cbf;
+    padding: 3px 5px 1px 7px;
+}
+
+.conteudo, .conteudo-tabela3, .conteudo-tabela4 {
+    padding: 15px;
+    color: #e0aaff; /* Texto lilás claro para dar leitura no escuro */
+    background: #120524; /* Fundo interno das caixas virou preto-roxo */
+    border: 3px solid #000000;
+    margin: 10px;
+    height: calc(100% - 75px); 
+    box-shadow: inset -2px -2px 0px #251242, inset 2px 2px 0px #4a157d;
+    overflow-y: auto;
+}
+
+.icone-barra {
+    width: 30px;         
+    height: 30px;        
+    vertical-align: middle; 
+    margin-right: 7px;   
+    image-rendering: pixelated; 
+}
+
+/* ================= ELEMENTOS DECORATIVOS RETRÔ SOLTOS ================= */
+
+.decoracao-tela {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 15; 
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.decoracao-tela img {
+    width: 50px; /* <--- ISSO PODE ESTAR TRAVANDO O TAMANHO! */
+    height: 50px;
+    object-fit: contain;
+}
+.decoracao-tela:hover {
+    filter: drop-shadow(0px 0px 8px #8a2be2); /* Brilho neon roxo no hover */
+    transform: scale(1.1);
+}
+
+.tag-desktop {
+    margin-top: 5px;
+    font-family: monospace;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #4a157d;
+    padding: 1px 5px;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+    white-space: nowrap;
+}
+
+/* Posições dos Elementos (Mantendo as regras do seu art.css, mas prontas para os novos nomes) */
+.ds-gameboy { top: 3vh; left: 2vw; }
+.ds-gameboy img { width: 65px; }
+
+
+/* =================================================================
+   POSIÇÕES DOS ELEMENTOS NO DESKTOP (AJUSTADO PARA REVERSE MODE)
+   ================================================================= */
+
+/* A LÂMPADA agora ocupa o lugar onde a garota estava antes (topo esquerdo) */
+.ds-lampada { 
+    top: 3vh; 
+    left: 2vw; 
+} 
+.ds-lampada img { 
+    width: 65px; /* Tamanho padrão de ícone que o gameboy/girl usavam */
+}
+
+/* A GIRL agora fica posicionada no espaço entre a Janela 3 e a Janela 4 */
+.ds-girl { 
+    bottom: 12vh; 
+    left: 31vw;   /* Reajustado para acomodar o tamanho gigante sem colidir com o Paint */
+} 
+.ds-girl img { 
+    width: 230px !important;  /* BEM MAIOR: Subiu para 230px! */
+    height: auto !important; 
+}
+/* Mantendo os outros elementos originais do seu site intactos nos seus devidos lugares */
+.ds-sla { bottom: 2vh; left: 2vw; }
+.ds-sla img { width: 55px; }
+
+.ds-webcore { top: 2vh; left: 50%; transform: translateX(-50%); }
+.ds-webcore img { width: 45px; }
+
+.ds-softlov {
+    position: absolute;
+    top: 8vh;
+    right: 2vw; 
+    z-index: 15;
+}
+.ds-softlov img { 
+    width: 140px; 
+    height: auto;
+}
+
+/* Paint / Arte Pixel no Centro Fixo (Agora com bordas escuras) */
+.ds-artepixel {
+    position: absolute;
+    bottom: 12vh;              
+    left: 46%; 
+    transform: translateX(-50%); 
+    border: 3px solid #000000;   
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+    z-index: 15;
+}
+.ds-artepixel .img-paint {
+    width: 250px; 
+    height: auto;
+}
+
+.ds-artepixel .conteudo-paint {
+    position: absolute;
+    top: 11.5%;       
+    left: 15%;      
+    width: 79.5%;       
+    height: 64.5%;    
+    object-fit: fill; 
+}
+
+.desktop-icons {
+    display: block;
+}
+
+/* ================= ADAPTAÇÃO MOBILE (PERFEITA) ================= */
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto; 
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px; 
+    }
+    .desktop-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    .ds-gameboy, .ds-girl, .ds-lampada, .ds-lixeira, .ds-webcore, .ds-softlov {
+        position: static !important;
+        transform: none !important;
+    }
+    .janela, .janela2, .janela3, .janela4 {
+        position: static !important; 
+        width: 90vw !important;     
+        max-width: 500px;
+        height: auto !important;    
+        min-height: 250px;
+        box-sizing: border-box;
+    }
+    .conteudo, .conteudo-tabela3, .conteudo-tabela4 {
+        height: auto !important; 
+        min-height: 120px;
+    }
+    .ds-artepixel {
+        position: static !important;
+        margin-top: 20px;
+        max-width: 90vw;
+        transform: none !important;
+    }
+    .ds-artepixel .img-paint {
+        width: 100% !important;
+        max-width: 250px;
+    }
+}
+
+/* Faz os vídeos se encaixarem por completo sem cortar nada */
+.video-janela {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block;
+    margin: auto; 
+    background-color: #000000; 
+}
