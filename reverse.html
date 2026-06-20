@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site - Reverse Mode 💜</title>
+    <link rel="stylesheet" href="dark.css">
+</head>
+<body onclick="iniciarMusicaFundoReverse()">
+
+    <!-- Música de fundo geral do modo escuro -->
+    <audio id="musica-fundo-reverse" loop>
+        <source src="01 Babooshka.mp3">
+    </audio>
+
+    <!-- Elementos Decorativos Soltos (Desktop Icons) -->
+    <div class="desktop-icons">
+        <!-- Ícone da Garota no lugar do Game Boy -->
+        <div class="decoracao-tela ds-girl" onclick="alert('𝕴 𝕾𝖔𝖗𝖗𝖞...𝕾𝖔𝖗𝖗𝖞.𝕾𝖔𝖗𝖗𝖞 ')">
+            <img src="girl...gif" alt="girl">
+            <span class="tag-desktop">error_girl.exe</span>
+        </div>
+
+        <!-- Ícone da Lâmpada logo abaixo -->
+        <div class="decoracao-tela ds-lampada" onclick="alert('....')">
+            <img src="lampada.gif" alt="ds-lampada">
+            <span class="tag-desktop">lamp.exe</span>
+        </div>
+
+        <!-- Ícone da Lixeira / Voltar -->
+        <div class="decoracao-tela ds-sla" onclick="alert('Voltando para a superfície... 🌸'); window.location.href='art.html';">
+            <img src="ooooo.gif" alt="ds-sla">
+            <span class="tag-desktop">Voltar.exe</span>
+        </div>
+    </div>
+
+    <!-- JANELA 1 - Vídeo do Blitz -->
+    <div class="janela">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="girl2.gif" class="icone-barra" alt="Ícone">
+                System_Error // Blitz
+            </span>
+            <div class="controles">
+                <button class="btn">_</button>
+                <button class="btn">[]</button>
+                <button class="btn">X</button>
+            </div>
+        </div>
+        <div class="conteudo">
+            <video class="video-janela" controls autoplay loop muted>
+                <source src="blitz.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- JANELA 2 - Música 9Lana (Pausa o fundo ao clicar) -->
+    <div class="janela2" onclick="event.stopPropagation(); document.getElementById('musica-fundo-reverse').pause(); document.getElementById('musica-dark2').play();">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="girl2.gif" class="icone-barra" alt="Ícone">
+                𝟡𝕃𝕒𝕟𝕒 - ℙ𝕣𝕠𝕡𝕠𝕤𝕖 🎵
+            </span>
+            <div class="controles">
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-dark2').pause();">_</button>
+                <button class="btn">[]</button>
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-dark2').pause();">X</button>
+            </div>
+        </div>
+        <div class="conteudo">
+            <h2>𝔨𝔦𝔪𝔦 𝔴𝔞 𝔷𝔲𝔯𝔲𝔦 𝔷𝔲𝔯𝔲𝔦 ずるい ずるい ずるい 人だ もう 𝔷𝔲𝔯𝔲𝔦 𝔷𝔲𝔯𝔲𝔦 𝔷𝔲𝔯𝔲𝔦 𝔥𝔦𝔱𝔬 𝔡𝔞 𝔪𝔬𝔲 わがままな君の中で 𝔴𝔞𝔤𝔞𝔪𝔞𝔪𝔞 𝔫𝔞 𝔨𝔦𝔪𝔦 𝔫𝔬 𝔫𝔞𝔨𝔞 𝔡𝔢 綺麗に腐った罰 𝔨𝔦𝔯𝔢𝔦 𝔫𝔦 𝔨𝔲𝔰𝔞𝔱𝔱𝔞 𝔟𝔞𝔱𝔰𝔲 聞いて 聞いて 聞いて 𝔨𝔦𝔦𝔱𝔢 𝔨𝔦𝔦𝔱𝔢 𝔨𝔦𝔦𝔱𝔢 聞いて 聞いて 聞いてよ 𝔨𝔦𝔦𝔱𝔢 𝔨𝔦𝔦𝔱𝔢 𝔨𝔦𝔦𝔱𝔢 𝔶𝔬 お願い 優しく抱いて 𝔬𝔫𝔢𝔤𝔞𝔦 𝔶𝔞𝔰𝔞𝔰𝔥𝔦𝔨𝔲 𝔡𝔞𝔦𝔱𝔢 優しく抱いて 優しく抱いて 𝔶𝔞𝔰𝔞𝔰𝔥𝔦𝔨𝔲 𝔡𝔞𝔦𝔱𝔢 𝔶𝔞𝔰𝔞𝔰𝔥𝔦𝔨𝔲 𝔡𝔞𝔦𝔱𝔢..</h2>
+        </div>
+
+        <audio id="musica-dark2" loop>
+            <source src="9Lana_-_-_Propose_(Rilds.com).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- JANELA 3 - Espaço para Música Dark 2 -->
+    <div class="janela3" onclick="event.stopPropagation(); document.getElementById('musica-fundo-reverse').pause(); document.getElementById('musica-dark3').play();">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="girl2.gif" class="icone-barra" alt="Ícone">
+                𝕙𝕖𝕪 𝕃𝕚𝕥𝕥𝕝𝕖 𝕘𝕚𝕣𝕝
+            </span>
+            <div class="controles">
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-dark3').pause();">_</button>
+                <button class="btn">[]</button>
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-dark3').pause();">X</button>
+            </div>
+        </div>
+        <div class="conteudo-tabela3">
+            <h3>𝚃𝚊𝚔𝚎 𝚖𝚎 𝚑𝚘𝚖𝚎, 𝚑𝚘𝚖𝚎, 𝚑𝚘𝚖𝚎 𝙶𝚒𝚟𝚎 𝚖𝚎 𝚝𝚑𝚊𝚝 𝚙𝚒𝚗𝚔 𝚜𝚕𝚒𝚙 𝚘𝚏 𝚙𝚎𝚛𝚖𝚒𝚜𝚜𝚒𝚘𝚗 𝚃𝚑𝚒𝚜 𝚒𝚜 𝚘𝚕𝚍, 𝚘𝚕𝚍, 𝚘𝚕𝚍 𝙸'𝚖 𝚝𝚒𝚛𝚎𝚍 𝚘𝚏 𝚠𝚒𝚜𝚑𝚒𝚗𝚐 𝙸 𝚠𝚊𝚜 𝚍𝚒𝚝𝚌𝚑𝚒𝚗𝚐 𝙷𝚘𝚖𝚎, 𝚑𝚘𝚖𝚎, 𝚑𝚘𝚖𝚎 𝙾𝚕𝚍, 𝚘𝚕𝚍, 𝚘𝚕𝚍</h3>
+        </div>
+        
+        <audio id="musica-dark3" loop>
+            <source src="Nurse's Office - Melanie Martinez.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- JANELA 4 - Vídeo da Jinx -->
+    <div class="janela4">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="girl2.gif" class="icone-barra" alt="Ícone">
+                Get Jinxed // Jinx
+            </span>
+            <div class="controles">
+                <button class="btn">_</button>
+                <button class="btn">[]</button>
+                <button class="btn">X</button>
+            </div>
+        </div>
+        <div class="conteudo-tabela4">
+            <video class="video-janela" controls autoplay loop muted>
+                <source src="jinx.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- Script de Controle de Áudio Inteligente -->
+    <script>
+        function iniciarMusicaFundoReverse() {
+            var bgMusic = document.getElementById('musica-fundo-reverse');
+            var mJanela2 = document.getElementById('musica-dark2');
+            var mJanela3 = document.getElementById('musica-dark3');
+            
+            // Se alguma música de janela estiver tocando, não inicia o som de fundo
+            if (mJanela2 && !mJanela2.paused) return;
+            if (mJanela3 && !mJanela3.paused) return;
+            
+            if (bgMusic && bgMusic.paused) {
+                bgMusic.play().catch(function(e) { console.log("Aguardando clique inicial..."); });
+            }
+        }
+    </script>
+</body>
+</html>

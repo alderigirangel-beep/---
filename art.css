@@ -1,0 +1,287 @@
+body {
+    background-image: url("batimentos.gif");
+    background-size: cover;
+    background-color: blueviolet;
+    text-align: center;
+    font-family: fantasy;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= JANELAS DO SITE ================= */
+
+.janela {
+    position: absolute;
+    top: 8vh;         
+    left: 15vw;         
+    width: 28vw;       
+    height: 35vh;      
+    background: #ffb7d5; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #ffffff, inset -3px -3px 0px #ff69b4, 6px 6px 0px rgba(0, 0, 0, 0.3);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+.janela2 {
+    position: absolute;
+    top: 8vh;        
+    right: 17vw;       
+    width: 28vw;       
+    height: 35vh;      
+    background: #ffb7d5; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #ffffff, inset -3px -3px 0px #ff69b4, 6px 6px 0px rgba(0, 0, 0, 0.3);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+/* JANELA 3 - Afastada com segurança para a esquerda para não grudar no Paint */
+.janela3 {
+    position: absolute;
+    bottom: 12vh;          
+    left: 8vw; /* Mudou de 15vw para 8vw para empurrar a janela mais para a esquerda */         
+    width: 200px;       
+    height: 200px;      
+    background: #ffb7d5; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #ffffff, inset -3px -3px 0px #ff69b4, 6px 6px 0px rgba(0, 0, 0, 0.3);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+.janela4 {
+    position: absolute;
+    bottom: 12vh;          
+    right: 6vw; /* Mudou de 4vw para 6vw para afastar um pouquinho do lado direito do Paint */         
+    width: 340px;       
+    height: 230px;      
+    background: #ffb7d5; 
+    border: 3px solid #000000;
+    box-shadow: inset 3px 3px 0px #ffffff, inset -3px -3px 0px #ff69b4, 6px 6px 0px rgba(0, 0, 0, 0.3);  
+    border-radius: 0px; 
+    overflow: hidden;
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+/* ================= REGRAS DE CONTEÚDO DAS JANELAS ================= */
+
+.barra-titulo {
+    background: #ff4191; 
+    border-bottom: 3px solid #000000;
+    color: #ffffff;
+    padding: 6px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: monospace; 
+    font-weight: bold;
+    height: 34px;
+    box-sizing: border-box;
+}
+
+.barra-titulo .titulo {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;    
+    overflow: hidden;       
+    text-overflow: ellipsis;
+    padding-right: 15px;    
+    flex: 1;                
+}
+
+.controles {
+    display: flex;
+    flex-shrink: 0; 
+}
+
+.controles .btn {
+    background: #ffb7d5;
+    border: 2px solid #000000;
+    box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #ff69b4;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 2px 6px;
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.controles .btn:active {
+    box-shadow: inset 1px 1px 0px #ff69b4, inset -1px -1px 0px #ffffff;
+    padding: 3px 5px 1px 7px;
+}
+
+.conteudo, .conteudo-tabela3, .conteudo-tabela4 {
+    padding: 15px;
+    color: #000000;
+    background: #ffffff; 
+    border: 3px solid #000000;
+    margin: 10px;
+    height: calc(100% - 75px); 
+    box-shadow: inset -2px -2px 0px #ffffff, inset 2px 2px 0px #ff69b4;
+    overflow-y: auto;
+}
+
+.icone-barra {
+    width: 30px;         
+    height: 30px;         
+    vertical-align: middle; 
+    margin-right: 7px;   
+    image-rendering: pixelated; 
+}
+
+/* ================= ELEMENTOS DECORATIVOS RETRÔ SOLTOS ================= */
+
+.decoracao-tela {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 15; 
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.decoracao-tela img {
+    display: block;
+    image-rendering: pixelated;
+}
+
+.decoracao-tela:hover {
+    filter: drop-shadow(0px 0px 8px #ff69b4);
+    transform: scale(1.1);
+}
+
+.tag-desktop {
+    margin-top: 5px;
+    font-family: monospace;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #ff4191;
+    padding: 1px 5px;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 0px #000000;
+}
+
+/* Posições dos Elementos */
+.ds-gameboy { top: 3vh; left: 2vw; }
+.ds-gameboy img { width: 65px; }
+
+.ds-lixeira { bottom: 2vh; left: 2vw; }
+.ds-lixeira img { width: 55px; }
+
+.ds-webcore { top: 2vh; left: 50%; transform: translateX(-50%); }
+.ds-webcore img { width: 45px; }
+
+.ds-softlov {
+    position: absolute;
+    top: 8vh;
+    right: 2vw; 
+    z-index: 15;
+}
+.ds-softlov img { 
+    width: 140px; 
+    height: auto;
+}
+
+/* Paint / Arte Pixel no Centro Fixo */
+.ds-artepixel {
+    position: absolute;
+    bottom: 12vh;              
+    left: 46%; 
+    transform: translateX(-50%); 
+    border: 3px solid #000000;   
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    z-index: 15;
+}
+.ds-artepixel .img-paint {
+    width: 250px; 
+    height: auto;
+}
+
+/* Alinhamento perfeito do Angel Dust no quadro branco do Paint */
+.ds-artepixel .conteudo-paint {
+    position: absolute;
+    top: 11.5%;       
+    left: 15%;      
+    width: 79.5%;       
+    height: 64.5%;    
+    object-fit: fill; 
+}
+
+.desktop-icons {
+    display: block;
+}
+
+/* ================= ADAPTAÇÃO MOBILE ================= */
+@media (max-width: 900px) {
+    body {
+        overflow-y: auto; 
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px; 
+    }
+    .desktop-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .ds-gameboy, .ds-lixeira, .ds-webcore, .ds-softlov {
+        position: static !important;
+        transform: none !important;
+    }
+    .janela, .janela2, .janela3, .janela4 {
+        position: static !important; 
+        width: 90vw !important;     
+        max-width: 500px;
+        height: auto !important;    
+        min-height: 250px;
+        box-sizing: border-box;
+    }
+    .conteudo, .conteudo-tabela3, .conteudo-tabela4 {
+        height: auto !important; 
+        min-height: 120px;
+    }
+    .ds-artepixel {
+        position: static !important;
+        margin-top: 20px;
+        max-width: 90vw;
+        transform: none !important;
+    }
+    .ds-artepixel .img-paint {
+        width: 100% !important;
+        max-width: 250px;
+    }
+}
+/* Faz os vídeos se encaixarem por completo sem cortar nada */
+.video-janela {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block;
+    margin: auto; 
+    background-color: #000000; 
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Retrô</title>
+    <link rel="stylesheet" href="art.css">
+</head>
+<body onclick="iniciarMusicaFundo()">
+    <audio id="musica-fundo" loop>
+        <source src="Real Man - Beabadoobee (youtube).mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Função para iniciar a música de fundo no primeiro clique no site
+        function iniciarMusicaFundo() {
+            var bgMusic = document.getElementById('musica-fundo');
+            // Só dá play se as outras músicas das janelas não estiverem tocando
+            if (bgMusic.paused && 
+                document.getElementById('musica-janela2').paused && 
+                document.getElementById('musica-janela3').paused) {
+                bgMusic.play();
+            }
+        }
+    </script>
+
+    <div class="desktop-icons">
+        <div class="decoracao-tela ds-gameboy" onclick="alert('𝓒𝓸𝓻𝓻𝓪 𝓒𝓸𝓻𝓻𝓪 𝓪𝓱𝓱𝓪𝓱𝓱𝓪𝓱𝓪𝓱𝓪𝓱𝓪 🎮')">
+            <img src="game boy.gif" alt="Game Boy">
+            <span class="tag-desktop">game_boy.exe</span>
+        </div>
+
+       <div class="decoracao-tela ds-lixeira" onclick="alert('A lixeira está cheia de sentimentos antigos... 🌸🗑️'); window.location.href='reverse.html';">
+            <img src="Lixo kawaii.jpg" alt="Lixeira">
+            <span class="tag-desktop">Recycle </span>
+        </div>
+
+        <div class="decoracao-tela ds-webcore" onclick="alert('𝓢𝓮𝓾 𝓬𝓸𝓻𝓪𝓬̧𝓪̃𝓸 𝓮́ 𝓶𝓮𝓾 𝓼𝓸 𝓶𝓮𝓾 ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ')">
+            <img src="gif webcore coração.gif" alt="Coração">
+        </div>
+
+        <div class="decoracao-tela ds-softlov" onclick="alert('𝓜𝓘𝓜 𝓜𝓘𝓜 𝓜𝓘𝓜 !!!')">
+            <img src="soft_lov3.png" alt="Soft Lov3">
+        </div>
+
+        <div class="decoracao-tela ds-artepixel" onclick="alert('𝓗𝓮𝔂 𝓫𝓪𝓫𝔂 🚬')">
+            <img src="artepixel.jpg" alt="Interface Paint" class="img-paint">
+            <img src="Angel Dust Pixel Art.jpg" alt="Angel Dust Art" class="conteudo-paint">
+        </div>
+    </div>
+
+    <div class="janela">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="flower.gif" class="icone-barra" alt="Ícone">
+                Hey! Smile! Smile!
+            </span>
+            <div class="controles">
+                <button class="btn">_</button>
+                <button class="btn">[]</button>
+                <button class="btn">X</button>
+            </div>
+        </div>
+        <div class="conteudo">
+            <video class="video-janela" controls autoplay loop muted>
+                <source src="perola.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+    </div>
+
+    <div class="janela2" onclick="document.getElementById('musica-fundo').pause(); document.getElementById('musica-janela2').play(); event.stopPropagation();">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="flower.gif" class="icone-barra" alt="Ícone">
+                I was made for lovin' you 🎵
+            </span>
+            <div class="controles">
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-janela2').pause();">_</button>
+                <button class="btn">[]</button>
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-janela2').pause();">X</button>
+            </div>
+        </div>
+        <div class="conteudo">
+            <h2>𝚃𝚘𝚗𝚒𝚐𝚑𝚝 𝙸 𝚠𝚊𝚗𝚗α 𝚐𝚒鍵𝚎 𝚒τ 𝚊𝚕𝚕 𝚝𝚘 𝚢𝚘𝚞 𝙸𝚗 𝚝𝚑𝚎 𝚍𝚊𝚛𝚔𝚗ε𝚜𝚜 𝚃𝚑𝚎𝚛ε's 𝚜𝚘 𝚖𝚞𝚌𝚑 𝙸 𝚠𝚊んτ 𝚝𝚘 𝚍𝚘 𝙰𝚗𝚍 𝚝𝚘𝚗𝚒𝚐𝚑𝚝 𝙸 𝚠𝚊んν 𝚕𝚊𝚢 𝚒𝚝 𝚊𝚝 𝚢𝚘𝚞ρ 𝚏𝚎𝚎𝚝 '參𝚞𝚜ε, 𝚐𝚒𝚛λ, 𝙸 𝚠𝚊𝚜 𝚖𝚊𝚍𝚎 𝚏𝚘𝚛 𝚢𝚘𝚞 𝙰𝚗𝚍, 𝚐𝚒𝚛λ, 𝚢𝚘υ 𝚠ερε 𝚖𝚊𝚍𝚎 𝚏𝚘𝚛 𝚖𝚎</h2>
+        </div>
+
+        <audio id="musica-janela2" loop>
+            <source src="I Was Made For Lovin' You (1).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    </div>
+
+    <div class="janela3" onclick="document.getElementById('musica-fundo').pause(); document.getElementById('musica-janela3').play(); event.stopPropagation();">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="flower.gif" class="icone-barra" alt="Ícone">
+                瞧𝓹𝓪𝓻𝓴𝓼 🎵
+            </span>
+            <div class="controles">
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-janela3').pause();">_</button>
+                <button class="btn">[]</button>
+                <button class="btn" onclick="event.stopPropagation(); document.getElementById('musica-janela3').pause();">X</button>
+            </div>
+        </div>
+        <div class="conteudo-tabela3">
+            <h3>𝙳𝚒𝚍 𝙸 𝚍𝚛𝚒𝚟𝚎 𝚢𝚘𝚞 𝚊𝚠𝚊𝚢? 𝙸 𝚔𝚗𝚘𝚠 𝚠𝚑𝚊𝚝 𝚢𝚘𝚞'𝚕𝚕 𝚜𝚊𝚢 𝚈𝚘υ 𝚜𝚊𝚢: 𝙾𝚑, 𝚜𝚒𝚗𝚐 𝚘𝚗𝚎 𝚢𝚘𝚞 𝚔𝚗𝚘𝚠 𝙱𝚞𝚝 𝙸 𝚙𝚛𝚘𝚖𝚒𝚜𝚎 𝚢𝚘υ 𝚝𝚑𝚒𝚜 𝙸'𝚕𝚕 𝚊𝚕𝚠𝚊𝚢𝚜 𝚕𝚘𝚘𝚔 𝚘𝚞𝚝 𝚏𝚘𝚛 𝚢𝚘𝚞 𝚃𝚑𝚊𝚝'𝚜 𝚠𝚑𝚊𝚝 𝙸'𝚕𝚕 𝚍𝚘 𝙸 𝚜𝚊𝚢: 𝙾𝚑</h3>
+        </div>
+        
+        <audio id="musica-janela3" loop>
+            <source src="Coldplay - Sparks.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="janela4">
+        <div class="barra-titulo">
+            <span class="titulo">
+                <img src="flower.gif" class="icone-barra" alt="Ícone">
+                𝓐𝓷𝓰𝓮𝓵!˚₊‧꒰ა ✦ ໒꒱ ‧₊˚
+            </span>
+            <div class="controles">
+                <button class="btn">_</button>
+                <button class="btn">[]</button>
+                <button class="btn">X</button>
+            </div>
+        </div>
+        <div class="conteudo-tabela4">
+            <video class="video-janela" controls autoplay loop muted>
+                <source src="angelanimação.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+</body>
+</html>
